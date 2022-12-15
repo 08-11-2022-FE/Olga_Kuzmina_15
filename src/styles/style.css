@@ -90,6 +90,9 @@ a {
     border-radius: 6px;
     margin-bottom: 7px;
     padding-left: 10px;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
 }
 .form__item select::placeholder, input::placeholder {
     font-family: 'Inter', sans-serif;
@@ -115,21 +118,7 @@ a {
     font-size: 13px;
     line-height: 18px;
 }
-.form__select {
-    position: relative;
-}
-.form__select:after {
-    content: " ";
-    width: 10.5px;
-    height: 13.5px;
-    content: url(../images/icon-arrows.svg);
-    position: absolute;
-    z-index: 100;
-    right: 8.5px;
-    top: 12.5px;
-    cursor: pointer;
-}
-.form__select select {
+.form__item select {
     max-width: 100%;
     height: 38px;
     border: 1px solid #E4E4E4;
@@ -146,6 +135,9 @@ a {
     appearance: none;
     padding-left: 10px;
     position: relative;
+    background-image: url(../images/icon-arrows.svg);
+    background-repeat: no-repeat;
+    background-position: right 8.5px bottom 12.5px;
 }
 .form__button-blue {
     height: 38px;
